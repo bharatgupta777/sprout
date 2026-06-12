@@ -7,6 +7,14 @@
 
 ![Home screen](./docs/home.png)
 
+## 🚀 Live demo &amp; install
+
+**Play now / install:** **https://bharatgupta777.github.io/sprout/**
+
+Scan to open on your phone, then use **Add to Home Screen** for an offline, full-screen app:
+
+<img src="./docs/install-qr.png" alt="QR code to open Sprout" width="220" />
+
 ## Why it's different
 
 Toddlers and preschoolers **can't read yet**, so most "learning apps" fail them.
@@ -24,7 +32,7 @@ Sprout is built around that reality:
 
 ## What's inside
 
-**21 activities** grouped into friendly sections on the home screen, in multiple formats
+**24 activities** grouped into friendly sections on the home screen, in multiple formats
 so something always clicks:
 
 | Activity | Group | What it builds |
@@ -36,8 +44,11 @@ so something always clicks:
 | Count With Me | Numbers & Logic | Hands-on one-to-one counting |
 | How Many? | Numbers & Logic | Quantity ↔ digit matching |
 | What's Next? | Numbers & Logic | Pattern recognition (early math) |
-| Memory Match | Numbers & Logic | Memory & focus |
 | Code a Path | Numbers & Logic | Sequencing & directions (early coding) |
+| Tic Tac Toe | Games | Three-in-a-row vs a friendly computer, or 2 players |
+| Memory Match | Games | Memory & focus |
+| Tap the Animals | Games | Whack-a-mole reflex fun |
+| Copy the Tune | Games | Simon-style musical memory |
 | Shapes & Colors | Discover the World | Shapes and colors |
 | Animal Safari | Discover the World | 30+ animals, sounds & facts by habitat |
 | Opposites | Discover the World | Concept words (big/small, hot/cold…) |
@@ -46,10 +57,10 @@ so something always clicks:
 | Music Maker | Stories & Songs | Rainbow xylophone: free play or play a song |
 | Feelings | Feelings & Me | Naming emotions |
 | Good Manners | Feelings & Me | Magic words & kind choices (please, thank you, sorry…) |
-| Color In | Create | Tap-to-fill coloring book (6 pictures) |
+| Color In | Create | Tap-to-fill coloring book (15 pictures) |
 | Draw & Paint | Create | Finger-paint with colors, brushes & emoji stamps |
 | Sticker Scene | Create | Build a picture on a scene (creative sandbox) |
-| Funny Voices | Create | Record your voice, hear it as a chipmunk/monster/bee 🎤 |
+| Funny Voices | Create | Record your voice, hear it 9 silly ways (chipmunk/whale/robot…) 🎤 |
 
 Plus:
 
@@ -59,6 +70,8 @@ Plus:
   (counting range, number of choices) so both kids share the same home, no hard walls.
 - **🖨️ Printable Activity Pack** — tracing, counting, shapes, coloring pages, a
   dot-to-dot, a maze, and a parent guide for screen-free days.
+- **📖 Growth &amp; Health Guide** (in the parent zone) — weight/height ranges, milestones,
+  and India-focused meal &amp; snack ideas for ages 2–6. See also [`docs/PARENT_GUIDE.md`](./docs/PARENT_GUIDE.md).
 
 ## Run it
 

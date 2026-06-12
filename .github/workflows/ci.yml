@@ -1,0 +1,39 @@
+name: CI (build & type-check)
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches-ignore: [main] # main is covered by the deploy workflow
+
+# Run bundled JavaScript actions on Node.js 24 (Node 20 is deprecated on runners).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check & build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - name: Upload preview build
+        uses: actions/upload-artifact@v4
+        with:
+          name: sprout-preview-${{ github.sha }}
+          path: dist
+          retention-days: 7
