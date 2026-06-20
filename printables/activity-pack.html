@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sprout — Printable Activity Pack</title>
+    <style>
+      :root { --ink: #2b2350; --soft: #6b6390; --primary: #7c5cff; }
+      * { box-sizing: border-box; }
+      body {
+        font-family: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+        color: var(--ink);
+        margin: 0;
+        background: #f4f1ff;
+      }
+      .toolbar {
+        position: sticky; top: 0; background: #fff; padding: 12px 20px;
+        display: flex; gap: 12px; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      }
+      .toolbar h1 { font-size: 20px; margin: 0; color: var(--primary); flex: 1; }
+      .toolbar button {
+        font: inherit; font-weight: 800; border: none; cursor: pointer;
+        background: var(--primary); color: #fff; padding: 10px 18px; border-radius: 999px;
+      }
+      .page {
+        width: 210mm; min-height: 290mm; background: #fff; margin: 16px auto;
+        padding: 18mm 16mm; box-shadow: 0 6px 24px rgba(0,0,0,.12); page-break-after: always;
+      }
+      .page h2 { color: var(--primary); font-size: 30px; margin: 0 0 4px; }
+      .page .sub { color: var(--soft); font-weight: 700; margin: 0 0 18px; }
+      .cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .cover .logo { font-size: 120px; }
+      .cover h2 { font-size: 56px; }
+      .trace-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .trace {
+        width: 30%; border: 2px dashed #cdbfff; border-radius: 14px; aspect-ratio: 1/1;
+        display: grid; place-items: center; font-size: 90px; font-weight: 800;
+        color: #d9d2f5; position: relative;
+      }
+      .trace small { position: absolute; bottom: 6px; right: 10px; font-size: 20px; color: var(--soft); }
+      .count-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .count-card {
+        width: 31%; border: 2px solid #eee; border-radius: 14px; padding: 12px; text-align: center;
+      }
+      .count-card .num { font-size: 64px; font-weight: 900; color: #d9d2f5; }
+      .count-card .dots { font-size: 26px; min-height: 40px; }
+      .count-card .draw { border-top: 2px dashed #ddd; margin-top: 8px; height: 60px; }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .color-box { border: 2px solid #eee; border-radius: 14px; padding: 10px; text-align: center; }
+      svg { width: 100%; height: auto; }
+      .note { color: var(--soft); font-weight: 700; font-size: 14px; }
+      ul { line-height: 1.6; }
+      @media print {
+        .toolbar { display: none; }
+        body { background: #fff; }
+        .page { box-shadow: none; margin: 0; width: auto; min-height: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <h1>🌱 Sprout — Printable Activity Pack</h1>
+      <span class="note">Tip: print double-sided, then grab some crayons!</span>
+      <button onclick="window.print()">🖨️ Print</button>
+    </div>
+
+    <!-- Cover -->
+    <section class="page cover">
+      <div class="logo">🌱</div>
+      <h2>Sprout</h2>
+      <p class="sub" style="font-size: 22px">Screen-Free Activity Pack for Little Learners</p>
+      <p class="note">Tracing • Counting • Shapes • Coloring • Dot-to-Dot • Mazes</p>
+      <p class="note">Ages 2–6 · Sit together, go slow, and celebrate every try.</p>
+    </section>
+
+    <!-- Letter tracing A-M -->
+    <section class="page">
+      <h2>Trace the Letters ✏️</h2>
+      <p class="sub">Trace each letter with your finger first, then a crayon.</p>
+      <div class="trace-row" id="trace-az-1"></div>
+    </section>
+    <section class="page">
+      <h2>Trace the Letters ✏️</h2>
+      <p class="sub">You're doing great — keep going!</p>
+      <div class="trace-row" id="trace-az-2"></div>
+    </section>
+
+    <!-- Number trace + count -->
+    <section class="page">
+      <h2>Count &amp; Trace 1–10 🔢</h2>
+      <p class="sub">Trace the number, count the dots, then draw that many in the box.</p>
+      <div class="count-row" id="count-row"></div>
+    </section>
+
+    <!-- Shapes -->
+    <section class="page">
+      <h2>Shapes to Color 🟦</h2>
+      <p class="sub">Say the shape's name, then color it your favorite color.</p>
+      <div class="grid2">
+        <div class="color-box"><svg viewBox="0 0 200 160"><circle cx="100" cy="80" r="60" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Circle</b></div>
+        <div class="color-box"><svg viewBox="0 0 200 160"><rect x="50" y="30" width="100" height="100" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Square</b></div>
+        <div class="color-box"><svg viewBox="0 0 200 160"><polygon points="100,20 160,140 40,140" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Triangle</b></div>
+        <div class="color-box"><svg viewBox="0 0 200 160"><polygon points="100,20 118,70 172,70 128,102 145,155 100,122 55,155 72,102 28,70 82,70" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Star</b></div>
+        <div class="color-box"><svg viewBox="0 0 200 160"><path d="M100 145 C 20 90, 40 25, 100 60 C 160 25, 180 90, 100 145 Z" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Heart</b></div>
+        <div class="color-box"><svg viewBox="0 0 200 160"><polygon points="100,20 150,80 100,140 50,80" fill="none" stroke="#2b2350" stroke-width="3"/></svg><b>Diamond</b></div>
+      </div>
+    </section>
+
+    <!-- Coloring page -->
+    <section class="page">
+      <h2>Coloring: A Sunny Day ☀️</h2>
+      <p class="sub">Color the sun, the flower, the house, and the fish.</p>
+      <div class="grid2">
+        <div class="color-box">
+          <svg viewBox="0 0 200 160">
+            <circle cx="100" cy="80" r="40" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <g stroke="#2b2350" stroke-width="3">
+              <line x1="100" y1="10" x2="100" y2="30"/><line x1="100" y1="130" x2="100" y2="150"/>
+              <line x1="30" y1="80" x2="50" y2="80"/><line x1="150" y1="80" x2="170" y2="80"/>
+              <line x1="45" y1="35" x2="60" y2="50"/><line x1="140" y1="110" x2="155" y2="125"/>
+              <line x1="155" y1="35" x2="140" y2="50"/><line x1="60" y1="110" x2="45" y2="125"/>
+            </g>
+          </svg><b>Sun</b>
+        </div>
+        <div class="color-box">
+          <svg viewBox="0 0 200 160">
+            <circle cx="100" cy="60" r="16" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="70" cy="60" r="16" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="130" cy="60" r="16" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="85" cy="40" r="16" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="115" cy="40" r="16" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="100" cy="58" r="12" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <line x1="100" y1="74" x2="100" y2="150" stroke="#2b2350" stroke-width="3"/>
+          </svg><b>Flower</b>
+        </div>
+        <div class="color-box">
+          <svg viewBox="0 0 200 160">
+            <rect x="55" y="80" width="90" height="60" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <polygon points="50,80 100,40 150,80" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <rect x="90" y="105" width="22" height="35" fill="none" stroke="#2b2350" stroke-width="3"/>
+          </svg><b>House</b>
+        </div>
+        <div class="color-box">
+          <svg viewBox="0 0 200 160">
+            <ellipse cx="95" cy="80" rx="55" ry="32" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <polygon points="150,80 185,55 185,105" fill="none" stroke="#2b2350" stroke-width="3"/>
+            <circle cx="70" cy="72" r="4" fill="#2b2350"/>
+          </svg><b>Fish</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dot to dot -->
+    <section class="page">
+      <h2>Dot-to-Dot: Count to 10 ✨</h2>
+      <p class="sub">Draw a line from 1 to 2 to 3… all the way to 10. What did you make?</p>
+      <svg viewBox="0 0 400 300" style="max-width:520px; display:block; margin:0 auto;" id="dot2dot"></svg>
+      <p class="note" style="text-align:center">(It's a star! ⭐)</p>
+    </section>
+
+    <!-- Maze -->
+    <section class="page">
+      <h2>Help the Bunny Find the Carrot 🐰🥕</h2>
+      <p class="sub">Draw a path through the maze from start to finish.</p>
+      <svg viewBox="0 0 320 320" style="max-width:480px; display:block; margin:0 auto; border:3px solid #2b2350;" id="maze"></svg>
+    </section>
+
+    <!-- Parent guide -->
+    <section class="page">
+      <h2>For Grown-Ups 🌿</h2>
+      <p class="sub">How to get the most out of Sprout (app + printables).</p>
+      <ul>
+        <li><b>Keep it short &amp; sweet.</b> 5–10 minutes at a time is perfect for ages 2–4.</li>
+        <li><b>Narrate everything.</b> Name colors, count out loud, repeat letter sounds.</li>
+        <li><b>Celebrate effort, not just answers.</b> "You tried so hard!" beats "You're right!"</li>
+        <li><b>Follow their lead.</b> Let your child re-do favorites — repetition is how they learn.</li>
+        <li><b>Pair screen + paper.</b> Play "ABC Sounds" in the app, then trace those letters here.</li>
+        <li><b>Use the app's Parent Zone</b> to switch the age level, slow the narration, or reduce motion.</li>
+      </ul>
+      <h2 style="margin-top: 24px">A 5-Day Starter Rhythm</h2>
+      <ul>
+        <li><b>Mon:</b> ABC Sounds + Letter tracing</li>
+        <li><b>Tue:</b> Count With Me + Count &amp; Trace page</li>
+        <li><b>Wed:</b> Animal Safari + a coloring page</li>
+        <li><b>Thu:</b> Story Time + talk about the lesson</li>
+        <li><b>Fri:</b> Code a Path + the maze</li>
+      </ul>
+      <p class="note">Made with love. Sprout collects no data and needs no internet — play anywhere.</p>
+    </section>
+
+    <script>
+      // Letter tracing tiles A-Z split across two pages.
+      const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+      function traceTiles(letters) {
+        return letters
+          .map((l) => `<div class="trace">${l}<small>${l.toLowerCase()}</small></div>`)
+          .join("");
+      }
+      document.getElementById("trace-az-1").innerHTML = traceTiles(LETTERS.slice(0, 13));
+      document.getElementById("trace-az-2").innerHTML = traceTiles(LETTERS.slice(13));
+
+      // Count & trace 1-10.
+      const dots = (n) => "● ".repeat(n).trim();
+      document.getElementById("count-row").innerHTML = Array.from({ length: 10 }, (_, i) => {
+        const n = i + 1;
+        return `<div class="count-card"><div class="num">${n}</div><div class="dots">${dots(n)}</div><div class="draw"></div></div>`;
+      }).join("");
+
+      // Dot-to-dot star (10 points).
+      const starPts = [
+        [200, 30], [228, 110], [312, 110], [244, 160], [270, 245],
+        [200, 195], [130, 245], [156, 160], [88, 110], [172, 110],
+      ];
+      const d2d = document.getElementById("dot2dot");
+      d2d.innerHTML = starPts
+        .map((p, i) => {
+          const n = i + 1;
+          return `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="#2b2350"/><text x="${p[0] + 8}" y="${p[1] - 8}" font-size="18" font-weight="800" fill="#7c5cff">${n}</text>`;
+        })
+        .join("");
+
+      // Simple printable maze grid.
+      const maze = document.getElementById("maze");
+      let m = "";
+      const layout = [
+        "S.#.....#",
+        ".#.###.#.",
+        ".#...#.#.",
+        ".###.#.#.",
+        "...#.#...",
+        ".#.#.###.",
+        ".#.....#.",
+        ".#####.#.",
+        ".......#E",
+      ];
+      const cell = 320 / 9;
+      layout.forEach((row, r) => {
+        row.split("").forEach((ch, c) => {
+          const x = c * cell, y = r * cell;
+          if (ch === "#") m += `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" fill="#cdbfff"/>`;
+          if (ch === "S") m += `<text x="${x + 6}" y="${y + cell - 8}" font-size="22">🐰</text>`;
+          if (ch === "E") m += `<text x="${x + 6}" y="${y + cell - 8}" font-size="22">🥕</text>`;
+        });
+      });
+      maze.innerHTML = m;
+    </script>
+  </body>
+</html>

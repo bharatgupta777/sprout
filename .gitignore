@@ -1,0 +1,21 @@
+node_modules
+dist
+dist-ssr
+dev-dist
+*.local
+.DS_Store
+
+# Personal input / notes (kept out of the public repo)
+input/
+
+# Tooling / verification artifacts
+.playwright-mcp
+sprout-home.png
+sprout-numbermatch.png
+sprout-correct.png
+sprout-printable.png
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
