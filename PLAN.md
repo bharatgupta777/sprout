@@ -90,46 +90,36 @@ designer). Their unanimous, highest-impact recommendations were implemented:
 5. Verify build/dev, polish, README.
 
 ## Progress so far
-- Core PWA architecture and home-screen registry are in place.
-- New activities added: Animal Baby Match, Animal Sound Match, Color Sorting, Food Sort, Healthy vs Junk Food, Means of Transport, Lego Blocks, Rhyming Pairs, and Spot the Difference.
-- All requested toddler-friendly learning games are now implemented and wired into the home screen.
-- Local build passes cleanly; the app is previewable in the browser.
-- New content modules are present under `src/content/` to support these games.
+- Core PWA architecture, home-screen registry, and parent-gated dashboard are fully in place.
+- Added a broader activity library with **51 activities** spanning toddler-first play, letters and vocabulary, numbers and logic, games, world discovery, stories, feelings, family, and creative play.
+- Family experiences are now included: Family Photos, Family Voices, Family Match, Family Editor, Pretend Home, and Request a Snack.
+- Added the interactive drawing/tracing activity ("Trace & Learn") for nursery children (standing, sleeping, slanting lines, letters, numbers, shapes).
+- Redesigned the "Lego Blocks" activity to be an interactive 3D block assembly board with Sandbox and Challenge modes.
+- The app build passes locally with `npm run build`; the production preview works and the PWA install flow is verified.
+- Content modules under `src/content/` fully support these activities, including stories, songs, vocabulary, and parent guidance.
 
-## Completed checklist
-- [x] Animal baby matching
-- [x] Big vs small, day vs night, hot vs cold opposites
-- [x] Healthy vs junk food learning games
-- [x] Animal sound matching
-- [x] Transport matching
-- [x] Color sorting
-- [x] Lego block pattern completion
-- [x] Spot the difference observation game
-- [x] Rhyming pairs word game
+## Current state (shipped)
+- **51 activities** grouped on the home screen into: *Just for Tots, Letters & Words, Numbers & Logic, Games, Discover the World, Stories & Songs, Feelings & Me, Family & Home, Create.*
+  - **Just for Tots:** Pop & Play, Peekaboo, Find the Object for non-readers.
+  - **Letters & Words:** ABC Sounds, Letter Hunt, First Words, Hindi Words, Word Pop, Rhyming Pairs, Finish the Sound, Trace & Learn.
+  - **Numbers & Logic:** Count With Me, How Many?, What's Next?, Code a Path, Lego Blocks (3D Assembly).
+  - **Games:** Tic Tac Toe, Memory Match, Tap the Animals, Copy the Tune, Spot the Difference.
+  - **Discover the World:** Animal Safari, Baby Animal Match, Animal Sound Match, Color Sorting, Means of Transport, Food Sort, Healthy vs Junk Food, Opposites, Community Helpers, Festival Match, Life Cycles.
+  - **Stories & Songs:** Story Time, Sing Along, Music Maker.
+  - **Feelings & Me:** Feelings, Emotion Match, Mirror Moves, Good Manners.
+  - **Family & Home:** Family Photos, Family Voices, Family Match, Family Editor, Pretend Home, Request a Snack.
+  - **Create:** Color In, Draw & Paint, Sticker Scene, Funny Voices.
+- **Content depth:** A–Z phonics, numbers 1–20, dozens of animals, stories, songs, vocabulary, patterns, manners scenarios, and early coding levels.
+- **Narration:** natural voice ranking, expressive prosody, slower speech toggle, captions, and a keep-alive mechanism so long story narration stays active.
+- **Ethical loop:** the **Garden** grows a plant per completed activity — no streak pressure.
+- **Parent zone (gated):** stats, settings, voice picker, printable pack, and a **Growth & Health Guide** with general guidance, weight/height ranges, milestones, and India-focused meal/snack ideas.
+- **PWA:** installable and offline-capable with service worker, manifest, and maskable icons. `BASE_PATH` is configurable for GitHub Pages and custom deployments.
 
 ## Next priorities
 - Improve voice quality and make narration sound more human.
 - Add longer stories and richer story adventures.
-- Refine Lego Blocks to be a block-picking and arranging activity rather than a simple pattern match.
 - Expand toddler-specific experiences like sound imitation, peekaboo, object-finding, and family voice album.
 - Add a parent content editor for family members, photos, sounds, and vocabulary.
-
-## Current state (shipped)
-- **24 activities** grouped on the home screen into: *Just for Tots, Letters & Words,
-  Numbers & Logic, Games, Discover the World, Stories & Songs, Feelings & Me, Create.*
-  - **Games:** Tic Tac Toe (beatable computer or 2-player), Memory Match, Tap the
-    Animals (whack-a-mole), Copy the Tune (Simon-style musical memory).
-  - **Create:** Draw Pad (paint + emoji stamps), Sticker Scene, Color-In (15 pictures),
-    Music Maker (xylophone), Funny Voices (record + 9 voice effects).
-- **Content depth:** A–Z phonics, numbers 1–20, 30+ animals, **32 narrated stories**,
-  **16 songs**, first-words vocabulary, patterns, manners scenarios, coding levels.
-- **Narration:** neural/natural voice ranking, expressive prosody, slower-speech toggle,
-  captions, and a Chrome keep-alive so long stories don't cut off.
-- **Ethical loop:** the **Garden** grows a plant per finished activity (no streak pressure).
-- **Parent zone (gated):** stats, settings, voice picker, printable pack, and a new
-  **Growth & Health Guide** (weight/height ranges, milestones, India meal & snack ideas).
-- **PWA:** installable + offline (service worker, manifest, maskable icons). Base path is
-  configurable (`BASE_PATH`) so it deploys to GitHub Pages subpaths or custom domains.
 
 ## Deployment
 - **GitHub Pages** via `.github/workflows/deploy.yml` (build with `BASE_PATH=/sprout/`,

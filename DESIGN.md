@@ -113,11 +113,10 @@ cheer / oops / tap / award / updateSettings / completeOnboarding / reset` plus a
 
 ## Progress so far
 - The app now includes the core PWA structure, home screen grouping, audio-first narration, parent-gated settings, and a Garden-style reward loop.
-- Several new activities have been integrated and validated in the registry, with local build verification passing.
-- Deployment-ready configuration exists for GitHub Pages, Netlify, and Vercel.
+- The activity registry and content system now support **51 activities** across 9 categories, including family-focused, toddler-first experiences, and tracing/drawing.
+- Local build verification passes; the PWA deployment configuration is ready for GitHub Pages, Netlify, and Vercel.
 
 ## Next improvements
 - Humanize the voice narration further and add a wider range of longer stories.
-- Enhance Lego Blocks to be a block-picking and arranging activity rather than a simple pattern match.
 - Continue expanding family-focused and toddler-focused features such as family relationships, real photo mode, community helper matching, and gesture/sound imitation games.
 - Add a parent editor for customizable family members, photos, sounds, vocabulary, and story personalization.

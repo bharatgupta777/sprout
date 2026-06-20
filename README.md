@@ -30,53 +30,50 @@ Sprout is built around that reality:
   required.** COPPA-friendly by construction.
 - **👪 Parent-gated zone** for settings, progress, and the printable pack.
 
+## What’s new
+
+- **51 activities** now live across 9 home-screen groups.
+- **Trace & Learn** activity added for early childhood tracing of lines, letters, shapes, and numbers.
+- **Lego Blocks** redesigned to be an interactive 3D block-building sandbox and copying game.
+- **Family & Home** features added: Family Photos, Family Voices, Family Match, Family Editor, Pretend Home, and Request a Snack.
+- **Toddler-first play** expanded with Pop & Play, Peekaboo, Find the Object, and Mirror Moves.
+- Fully installable offline PWA with deployment-ready configs for Netlify, Vercel, and GitHub Pages.
+
 ## What's inside
 
-**24 activities** grouped into friendly sections on the home screen, in multiple formats
-so something always clicks:
+**51 activities** across 9 friendly groups so every child can find a way to play and learn.
+The home screen now includes toddler-first experiences, letters and words, numbers and logic,
+games, world discovery, stories and songs, feelings, family and home, plus creative play.
 
-| Activity | Group | What it builds |
-|---|---|---|
-| Pop & Play | Just for Tots | Cause-and-effect, no right/wrong (ages 2+) |
-| ABC Sounds | Letters & Words | Letter name + **sound** + a word (A–Z) |
-| Letter Hunt | Letters & Words | Letter recognition |
-| First Words | Letters & Words | 100+ words by picture across 10 categories |
-| Count With Me | Numbers & Logic | Hands-on one-to-one counting |
-| How Many? | Numbers & Logic | Quantity ↔ digit matching |
-| What's Next? | Numbers & Logic | Pattern recognition (early math) |
-| Code a Path | Numbers & Logic | Sequencing & directions (early coding) |
-| Tic Tac Toe | Games | Three-in-a-row vs a friendly computer, or 2 players |
-| Memory Match | Games | Memory & focus |
-| Tap the Animals | Games | Whack-a-mole reflex fun |
-| Copy the Tune | Games | Simon-style musical memory |
-| Shapes & Colors | Discover the World | Shapes and colors |
-| Animal Safari | Discover the World | 30+ animals, sounds & facts by habitat |
-| Opposites | Discover the World | Concept words (big/small, hot/cold…) |
-| Story Time | Stories & Songs | **24** narrated stories, each with a kind lesson |
-| Sing Along | Stories & Songs | **16** classic nursery rhymes, line-by-line |
-| Music Maker | Stories & Songs | Rainbow xylophone: free play or play a song |
-| Feelings | Feelings & Me | Naming emotions |
-| Good Manners | Feelings & Me | Magic words & kind choices (please, thank you, sorry…) |
-| Color In | Create | Tap-to-fill coloring book (15 pictures) |
-| Draw & Paint | Create | Finger-paint with colors, brushes & emoji stamps |
-| Sticker Scene | Create | Build a picture on a scene (creative sandbox) |
-| Funny Voices | Create | Record your voice, hear it 9 silly ways (chipmunk/whale/robot…) 🎤 |
+Some highlights:
+
+- **Just for Tots:** Pop & Play, Peekaboo, Find the Object — simple, no-wrong-touch play.
+- **Letters & Words:** ABC Sounds, Letter Hunt, First Words, Hindi Words, Word Pop, Rhyming Pairs, Finish the Sound, Trace & Learn.
+- **Numbers & Logic:** Count With Me, How Many?, What's Next?, Code a Path, Lego Blocks (3D Assembly).
+- **Games:** Tic Tac Toe, Memory Match, Tap the Animals, Copy the Tune, Spot the Difference.
+- **Discover the World:** Animal Safari, Baby Animal Match, Animal Sound Match, Color Sorting,
+  Means of Transport, Food Sort, Healthy vs Junk Food, Opposites, Community Helpers, Festival Match, Life Cycles.
+- **Stories & Songs:** Story Time, Sing Along, Music Maker.
+- **Feelings & Me:** Feelings, Emotion Match, Mirror Moves, Good Manners.
+- **Family & Home:** Family Photos, Family Voices, Family Match, Family Editor, Pretend Home, Request a Snack.
+- **Create:** Color In, Draw & Paint, Sticker Scene, Funny Voices.
 
 Plus:
 
 - **🌟 Today's Adventure** — a fresh, stable-for-the-day pick of 3 activities, so there's
-  a new path every day for a year.
-- **🎚️ Soft age levels** — a "Younger (2–3) / Older (4–6)" toggle tunes difficulty
-  (counting range, number of choices) so both kids share the same home, no hard walls.
-- **🖨️ Printable Activity Pack** — tracing, counting, shapes, coloring pages, a
-  dot-to-dot, a maze, and a parent guide for screen-free days.
-- **📖 Growth &amp; Health Guide** (in the parent zone) — weight/height ranges, milestones,
-  and India-focused meal &amp; snack ideas for ages 2–6. See also [`docs/PARENT_GUIDE.md`](./docs/PARENT_GUIDE.md).
+  a new path every day.
+- **🎚️ Soft age levels** — a "Younger / Older" mode tunes difficulty for toddlers and preschoolers.
+- **👪 Family & Home zone** — add family photos, voice recordings, and custom family vocabulary.
+- **🖨️ Printable Activity Pack** — tracing, counting, shapes, coloring pages, dot-to-dot, a maze, and a parent guide for screen-free days.
+- **📖 Growth & Health Guide** (in the parent zone) — weight/height ranges, milestones, and India-focused meal & snack ideas for ages 2–6. See also [`docs/PARENT_GUIDE.md`](./docs/PARENT_GUIDE.md).
 ## Progress so far
-- Added a suite of new activities and content modules for animal baby matching, animal sound matching, color sorting, healthy vs junk food, transport matching, rhyming pairs, Lego blocks, and spot the difference.
-- The app build is verified locally with `npm run build`, and a local preview is available at `http://127.0.0.1:4173`.
-- Deployment configuration is already included for Netlify, Vercel, and GitHub Pages.
-- Next focus: more human-like voice narration, longer stories, an improved Lego Blocks experience, toddler-specific games, and a parent content editor for family members, photos, sounds, and vocabulary.
+- Built a rich, installable offline PWA with **51 activities** across 9 home-screen groups.
+- Added toddler-first experiences like **Pop & Play, Peekaboo, Find the Object, Mirror Moves**, and family-focused features such as **Family Photos, Family Voices, Family Match, and Family Editor**.
+- Added **Trace & Learn** drawing guide activity (lines, letters, shapes, numbers) and rebuilt **Lego Blocks** into an interactive 3D grid assembly sandbox/challenge board.
+- Expanded discovery and learning games with **Animal Safari, Baby Animal Match, Animal Sound Match, Color Sorting, Healthy vs Junk Food, Community Helpers, Festival Match, Life Cycles, and more**.
+- Verified the local build with `npm run build`; preview works in the browser, including PWA install and offline caching.
+- Deployment-ready config is already included for Netlify, Vercel, and GitHub Pages.
+- Next focus: human-like voice narration, longer stories, richer story adventures, and a stronger parent content editor.
 ## Run it
 
 Requires Node 18+.

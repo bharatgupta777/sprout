@@ -48,6 +48,7 @@ import { RequestSnack } from "../activities/RequestSnack";
 import { WordPop } from "../activities/WordPop";
 import { EmotionMatch } from "../activities/EmotionMatch";
 import { FamilyEditor } from "../activities/FamilyEditor";
+import { TraceDraw } from "../activities/TraceDraw";
 
 export interface ActivityMeta {
   id: string;
@@ -72,6 +73,7 @@ export const ACTIVITIES: ActivityMeta[] = [
   { id: "hindi-vocab", title: "Hindi Words", emoji: "🪔", subject: "Vocabulary", group: "Letters & Words", color: "c-sky", blurb: "Match Hindi and English words with fun pictures.", Component: HindiVocab },
   { id: "finish-sound", title: "Finish the Sound", emoji: "🔊", subject: "Phonics", group: "Letters & Words", color: "c-purple", blurb: "Hear the beginning and tap the right ending sound.", Component: FinishSound },
   { id: "word-pop", title: "Word Pop", emoji: "💥", subject: "Reading", group: "Letters & Words", color: "c-pink", blurb: "Pop the word bubbles that match the picture prompt.", Component: WordPop },
+  { id: "trace-learn", title: "Trace & Learn", emoji: "✏️", subject: "Writing", group: "Letters & Words", color: "c-purple", blurb: "Learn to draw standing, sleeping, and slanting lines, letters, and numbers.", Component: TraceDraw },
 
   { id: "counting-critters", title: "Count With Me", emoji: "🐤", subject: "Numbers", group: "Numbers & Logic", color: "c-sun", blurb: "Tap each critter and count out loud — one-to-one counting.", Component: CountingCritters },
   { id: "number-match", title: "How Many?", emoji: "🔢", subject: "Numbers", group: "Numbers & Logic", color: "c-teal", blurb: "Count a group and tap the matching number.", Component: NumberMatch },
