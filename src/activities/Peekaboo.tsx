@@ -11,7 +11,7 @@ const HIDES = [
 ];
 
 export function Peekaboo({ onBack }: { onBack: () => void }) {
-  const { speak, cheer, tap, award } = useApp();
+  const { speak, tap, award } = useApp();
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [done, setDone] = useState(false);

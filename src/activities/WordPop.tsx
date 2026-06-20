@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ActivityShell } from "../components/ActivityShell";
 import { Confetti } from "../components/Confetti";
 import { useApp } from "../context/AppContext";
@@ -24,15 +24,12 @@ function randomWords(word: string) {
 export function WordPop({ onBack }: { onBack: () => void }) {
   const { speak, tap, award } = useApp();
   const [targetIndex, setTargetIndex] = useState(0);
-  const [bubbles, setBubbles] = useState(WORDS.slice(0, 6));
   const [poppedCount, setPoppedCount] = useState(0);
   const [confetti, setConfetti] = useState(0);
   const target = WORDS[targetIndex];
   const targetWords = useMemo(() => randomWords(target.word), [target]);
-  const keyRef = useRef(0);
 
   useEffect(() => {
-    setBubbles(targetWords);
     setPoppedCount(0);
     const t = setTimeout(() => speak(`Pop the ${target.word} bubbles!`), 220);
     return () => clearTimeout(t);
@@ -51,7 +48,6 @@ export function WordPop({ onBack }: { onBack: () => void }) {
         award(1, "word-pop");
       }
     }
-    setBubbles((prev) => prev.map((item) => (item.word === word ? { ...item, word: `${item.word} ` } : item)));
   };
 
   return (

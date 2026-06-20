@@ -11,7 +11,7 @@ const MOVES = [
 ];
 
 export function GestureImitation({ onBack }: { onBack: () => void }) {
-  const { speak, tap, award, cheer } = useApp();
+  const { speak, tap, award } = useApp();
   const [index, setIndex] = useState(0);
   const [done, setDone] = useState(false);
   const move = MOVES[index];
