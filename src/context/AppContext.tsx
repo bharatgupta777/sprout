@@ -11,12 +11,14 @@ import {
   type AgeMode,
   type ProgressState,
   type Settings,
+  type FamilyData,
 } from "../lib/progress";
 
 interface AppContextValue {
   state: ProgressState;
   settings: Settings;
   ageMode: AgeMode;
+  familyData: FamilyData;
   speak: (
     text: string,
     opts?: { rate?: number; pitch?: number; expressive?: boolean; onEnd?: () => void },
@@ -28,6 +30,7 @@ interface AppContextValue {
   tap: () => void;
   award: (n: number, activityId?: string) => void;
   updateSettings: (patch: Partial<Settings>) => void;
+  updateFamilyData: (familyData: FamilyData) => void;
   completeOnboarding: () => void;
   reset: () => void;
 }
@@ -113,6 +116,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
     persist({ ...stateRef.current, settings });
   };
 
+  const updateFamilyData: AppContextValue["updateFamilyData"] = (familyData) => {
+    persist({ ...stateRef.current, familyData });
+  };
+
   const completeOnboarding = () => persist(setOnboarded(stateRef.current));
 
   const reset = () => setState(resetState());
@@ -122,6 +129,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       state,
       settings: state.settings,
       ageMode: state.settings.ageMode,
+      familyData: state.familyData,
       speak,
       speakSequence,
       stopSpeech,
@@ -130,6 +138,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       tap,
       award,
       updateSettings,
+      updateFamilyData,
       completeOnboarding,
       reset,
     }),

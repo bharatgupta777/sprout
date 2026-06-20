@@ -72,7 +72,11 @@ Plus:
   dot-to-dot, a maze, and a parent guide for screen-free days.
 - **📖 Growth &amp; Health Guide** (in the parent zone) — weight/height ranges, milestones,
   and India-focused meal &amp; snack ideas for ages 2–6. See also [`docs/PARENT_GUIDE.md`](./docs/PARENT_GUIDE.md).
-
+## Progress so far
+- Added a suite of new activities and content modules for animal baby matching, animal sound matching, color sorting, healthy vs junk food, transport matching, rhyming pairs, Lego blocks, and spot the difference.
+- The app build is verified locally with `npm run build`, and a local preview is available at `http://127.0.0.1:4173`.
+- Deployment configuration is already included for Netlify, Vercel, and GitHub Pages.
+- Next focus: more human-like voice narration, longer stories, an improved Lego Blocks experience, toddler-specific games, and a parent content editor for family members, photos, sounds, and vocabulary.
 ## Run it
 
 Requires Node 18+.

@@ -92,7 +92,16 @@ export default function App() {
           }}
         />
       )}
-      {showParent && <ParentDashboard onClose={() => setShowParent(false)} />}
+      {showParent && (
+        <ParentDashboard
+          onClose={() => setShowParent(false)}
+          onOpen={(id: string) => {
+            stopSpeech();
+            setShowParent(false);
+            setView({ kind: "activity", id });
+          }}
+        />
+      )}
       {!state.onboarded && <Onboarding onDone={completeOnboarding} />}
     </div>
   );

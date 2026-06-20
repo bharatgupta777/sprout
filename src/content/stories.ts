@@ -545,4 +545,47 @@ export const STORIES: Story[] = [
       { art: "🌷", text: "Then spring came back, and the tree bloomed again!" }
     ]
   }
+  ,
+  {
+    id: "visit-nani",
+    title: "Visit Nani's House",
+    emoji: "🏡",
+    moral: "Visits with family are full of warmth and stories.",
+    pages: [
+      { art: "👧", text: "Aanya took the bus to Nani's cozy house by the mango tree." },
+      { art: "🧑‍🍳", text: "Nani hummed as she kneaded dough and showed Aanya how to roll rotis." },
+      { art: "🍪", text: "They stirred sweet chai and baked little cookies together." },
+      { art: "📚", text: "Nani told stories from long ago, with big smiles and gentle hands." },
+      { art: "🫶", text: "Aanya hugged Nani and learned a new recipe to try at home." },
+      { art: "🏡❤️", text: "At bedtime, Aanya whispered, 'I love Nani's house.'" },
+    ]
+  },
+  {
+    id: "help-grandma-cook",
+    title: "Help Grandma Cook",
+    emoji: "👵",
+    moral: "Helping in the kitchen teaches care and pride.",
+    pages: [
+      { art: "🥕", text: "Rohan washed carrots and counted them one by one." },
+      { art: "🍲", text: "Grandma showed him how to stir slowly so nothing sticks." },
+      { art: "👩‍🍳", text: "She let Rohan add a little spice and taste with a tiny spoon." },
+      { art: "🍽️", text: "When the food was ready, they set the table together." },
+      { art: "🤝", text: "Rohan felt proud to help — and Grandma smiled a big warm smile." },
+      { art: "😋", text: "They ate the meal together and clapped for Rohan's helping hands." },
+    ]
+  },
+  {
+    id: "help-puppy-get-home",
+    title: "Help Puppy Get Home",
+    emoji: "🐶",
+    moral: "Kind helpers bring others safely back to their families.",
+    pages: [
+      { art: "🐾", text: "Little Paws the puppy wandered away in the busy park." },
+      { art: "👀", text: "Mira found tiny footprints and followed them with gentle steps." },
+      { art: "🧑‍🤝‍🧑", text: "She asked friendly adults nearby, 'Has anyone seen a lost puppy?'" },
+      { art: "🏠", text: "Together they read the collar tag and led Puppy down the street." },
+      { art: "🐶🏡", text: "Puppy's family waited worriedly — then cheered with big hugs." },
+      { art: "💛", text: "Mira felt happy that helping kept Puppy safe and loved." },
+    ]
+  }
 ];

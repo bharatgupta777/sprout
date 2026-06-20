@@ -3,6 +3,23 @@
 
 export type AgeMode = "younger" | "older";
 
+export interface FamilyMember {
+  name: string;
+  role: string;
+}
+
+export interface VocabularyItem {
+  english: string;
+  hindi: string;
+}
+
+export interface FamilyData {
+  members: FamilyMember[];
+  photos: string[];
+  voices: string[];
+  vocabulary: VocabularyItem[];
+}
+
 export interface Settings {
   narration: boolean;
   speechRate: number;
@@ -21,6 +38,7 @@ export interface ProgressState {
   garden: string[]; // collected plant emojis — a no-pressure "growing" reward
   onboarded: boolean;
   settings: Settings;
+  familyData: FamilyData;
 }
 
 const KEY = "sprout.v1";
@@ -40,6 +58,19 @@ const defaultState: ProgressState = {
     ageMode: "younger",
     childName: "",
     voicePref: "auto",
+  },
+  familyData: {
+    members: [
+      { name: "Mama", role: "Mother" },
+      { name: "Papa", role: "Father" },
+      { name: "Nani", role: "Grandmother" },
+    ],
+    photos: [],
+    voices: [],
+    vocabulary: [
+      { english: "Milk", hindi: "दूध" },
+      { english: "Banana", hindi: "केला" },
+    ],
   },
 };
 

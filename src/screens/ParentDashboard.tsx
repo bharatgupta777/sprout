@@ -8,7 +8,7 @@ function Toggle({ on, onClick }: { on: boolean; onClick: () => void }) {
   return <button className={`toggle${on ? " on" : ""}`} aria-pressed={on} onClick={onClick} />;
 }
 
-export function ParentDashboard({ onClose }: { onClose: () => void }) {
+export function ParentDashboard({ onClose, onOpen }: { onClose: () => void; onOpen?: (id: string) => void }) {
   const { state, settings, updateSettings, reset } = useApp();
   const [confirmReset, setConfirmReset] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
@@ -130,6 +130,42 @@ export function ParentDashboard({ onClose }: { onClose: () => void }) {
         >
           🖨️ Open printable activity pack
         </button>
+
+        <h3 style={{ marginBottom: 4, marginTop: 18 }}>Family & Home</h3>
+        <div style={{ display: "flex", gap: 8, marginBottom: 8 }}>
+          <button
+            className="btn"
+            style={{ flex: 1 }}
+            onClick={() => {
+              onClose();
+              onOpen?.("family-editor");
+            }}
+          >
+            🛠️ Edit family
+          </button>
+          <button
+            className="btn"
+            style={{ flex: 1 }}
+            onClick={() => {
+              onClose();
+              onOpen?.("family-photo-album");
+            }}
+          >
+            📸 Family photos
+          </button>
+        </div>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button
+            className="btn"
+            style={{ flex: 1 }}
+            onClick={() => {
+              onClose();
+              onOpen?.("family-voice-album");
+            }}
+          >
+            🎧 Family voices
+          </button>
+        </div>
 
         {showGuide && <GrowthGuide onClose={() => setShowGuide(false)} />}
 

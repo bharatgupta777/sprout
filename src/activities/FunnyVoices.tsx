@@ -6,14 +6,17 @@ type Status = "idle" | "recording" | "ready" | "denied" | "unsupported";
 
 const EFFECTS = [
   { id: "normal", label: "Me", emoji: "🙂", rate: 1.0 },
-  { id: "chipmunk", label: "Chipmunk", emoji: "🐿️", rate: 1.8 },
-  { id: "mouse", label: "Mouse", emoji: "🐭", rate: 3.0 },
-  { id: "bee", label: "Tiny Bee", emoji: "🐝", rate: 2.4 },
-  { id: "robot", label: "Wobble", emoji: "🤖", rate: 1.35 },
+  { id: "chipmunk", label: "Chipmunk", emoji: "🐿️", rate: 1.9 },
+  { id: "mouse", label: "Mouse", emoji: "🐭", rate: 2.8 },
+  { id: "tiny-bee", label: "Tiny Bee", emoji: "🐝", rate: 2.2 },
+  { id: "robot", label: "Robot", emoji: "🤖", rate: 1.35 },
   { id: "sleepy", label: "Sleepy", emoji: "😴", rate: 0.78 },
   { id: "monster", label: "Monster", emoji: "👹", rate: 0.6 },
   { id: "giant", label: "Giant", emoji: "🦖", rate: 0.45 },
   { id: "whale", label: "Whale", emoji: "🐋", rate: 0.35 },
+  { id: "alien", label: "Alien", emoji: "👽", rate: 1.25 },
+  { id: "silly", label: "Silly", emoji: "🤪", rate: 1.6 },
+  { id: "echo", label: "Echo", emoji: "🌪️", rate: 1.15 },
 ];
 
 export function FunnyVoices({ onBack }: { onBack: () => void }) {

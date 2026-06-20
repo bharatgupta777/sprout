@@ -110,3 +110,14 @@ cheer / oops / tap / award / updateSettings / completeOnboarding / reset` plus a
 - TTS quality varies by device/browser; pre-recorded human audio is the top upgrade.
 - No analytics by design — product decisions rely on direct observation.
 - Localization pending (architecture already supports it).
+
+## Progress so far
+- The app now includes the core PWA structure, home screen grouping, audio-first narration, parent-gated settings, and a Garden-style reward loop.
+- Several new activities have been integrated and validated in the registry, with local build verification passing.
+- Deployment-ready configuration exists for GitHub Pages, Netlify, and Vercel.
+
+## Next improvements
+- Humanize the voice narration further and add a wider range of longer stories.
+- Enhance Lego Blocks to be a block-picking and arranging activity rather than a simple pattern match.
+- Continue expanding family-focused and toddler-focused features such as family relationships, real photo mode, community helper matching, and gesture/sound imitation games.
+- Add a parent editor for customizable family members, photos, sounds, vocabulary, and story personalization.

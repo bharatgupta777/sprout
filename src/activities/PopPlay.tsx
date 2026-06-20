@@ -32,6 +32,7 @@ export function PopPlay({ onBack }: { onBack: () => void }) {
   const tapsRef = useRef(0);
   const [confetti, setConfetti] = useState(0);
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
+  const [lastWord, setLastWord] = useState<string | null>(null);
 
   const makeBubble = (): Bubble => {
     const item = pick(ITEMS);
@@ -49,6 +50,8 @@ export function PopPlay({ onBack }: { onBack: () => void }) {
     if (b.popped) return;
     tap();
     speak(b.name, { pitch: 1.3 });
+    setLastWord(b.name);
+    setTimeout(() => setLastWord(null), 900);
     setBubbles((prev) => prev.map((x) => (x.key === b.key ? { ...x, popped: true } : x)));
     // Replace the popped bubble with a fresh one so the screen never empties.
     setTimeout(() => {
@@ -70,6 +73,7 @@ export function PopPlay({ onBack }: { onBack: () => void }) {
       onReplay={() => speak("Tap the bubbles!")}
     >
       <Confetti fire={confetti} />
+      <div style={{ textAlign: "center", minHeight: 28, marginBottom: 6, fontSize: 18 }}>{lastWord}</div>
       <div
         className="choice-grid"
         style={{ gridTemplateColumns: "repeat(3, 1fr)", maxWidth: 520, margin: "0 auto" }}
@@ -91,6 +95,9 @@ export function PopPlay({ onBack }: { onBack: () => void }) {
             }}
           >
             {b.emoji}
+            {b.popped && (
+              <div style={{ position: "absolute", transform: "translateY(48px)", fontSize: 16 }}>{b.name}</div>
+            )}
           </button>
         ))}
       </div>

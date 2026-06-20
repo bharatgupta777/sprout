@@ -89,6 +89,31 @@ designer). Their unanimous, highest-impact recommendations were implemented:
 4. Parent dashboard + printable pack + guide.
 5. Verify build/dev, polish, README.
 
+## Progress so far
+- Core PWA architecture and home-screen registry are in place.
+- New activities added: Animal Baby Match, Animal Sound Match, Color Sorting, Food Sort, Healthy vs Junk Food, Means of Transport, Lego Blocks, Rhyming Pairs, and Spot the Difference.
+- All requested toddler-friendly learning games are now implemented and wired into the home screen.
+- Local build passes cleanly; the app is previewable in the browser.
+- New content modules are present under `src/content/` to support these games.
+
+## Completed checklist
+- [x] Animal baby matching
+- [x] Big vs small, day vs night, hot vs cold opposites
+- [x] Healthy vs junk food learning games
+- [x] Animal sound matching
+- [x] Transport matching
+- [x] Color sorting
+- [x] Lego block pattern completion
+- [x] Spot the difference observation game
+- [x] Rhyming pairs word game
+
+## Next priorities
+- Improve voice quality and make narration sound more human.
+- Add longer stories and richer story adventures.
+- Refine Lego Blocks to be a block-picking and arranging activity rather than a simple pattern match.
+- Expand toddler-specific experiences like sound imitation, peekaboo, object-finding, and family voice album.
+- Add a parent content editor for family members, photos, sounds, and vocabulary.
+
 ## Current state (shipped)
 - **24 activities** grouped on the home screen into: *Just for Tots, Letters & Words,
   Numbers & Logic, Games, Discover the World, Stories & Songs, Feelings & Me, Create.*
